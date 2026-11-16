@@ -23,7 +23,7 @@ class Service_issues_admin(admin.ModelAdmin):
     list_display = ("service_item", "quantity", "measure", "unit_cost")
 
 class Service_records_admin(admin.ModelAdmin):
-    list_display = ("Service_id", "Vehicle_id", "service_center", "cost", "sercice_date")
+    list_display = ("Service_id", "Vehicle_id", "service_center", "cost", "service_date")
 
 admin.site.register(Car, Caradmin)
 admin.site.register(Staff, Staffadmin)

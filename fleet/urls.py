@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from fleetmanagement.views import home_view, car_form, edit_car, staff_form, edit_staff, assign_form, edit_assignment, fuelling_form, edit_fuel, repair_issues_form, service_issues_form, repair_records_form, service_records_form, edit_repair_issues, edit_service_issues, edit_repair_records, edit_service_records, delete_car_form, delete_staff_form, delete_assign_form, delete_fuel_form, delete_repair_issues_form, delete_service_issues_form, delete_repair_records_form, delete_service_records_form, sign_up_view
-from django.urls import include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +32,7 @@ urlpatterns = [
     path('delete_staff/<int:staff_id>/', delete_staff_form, name='delete_staff_page'),
     path('assignment/', assign_form, name='assignment_page'),
     path('edit_assignment/<int:assignmentid>/', edit_assignment, name='edit_assignment_page'),
-    path('delete_assignment/<int:assignmentid>/', delete_assign_form, name='delete_assignment_page'),
+    path('delete_assignment/<int:assign_id>/', delete_assign_form, name='delete_assignment_page'),
     path('fuelling/', fuelling_form, name='fuelling_page'),
     path('edit_fuel/<int:fuelid>/', edit_fuel, name='edit_fuel_page'),
     path('delete_fuel/<int:fuel_id>/', delete_fuel_form, name='delete_fuel_page'),
